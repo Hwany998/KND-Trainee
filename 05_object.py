@@ -54,4 +54,22 @@ ok = True
 print("num >>>",type(num))    # num <class 'int'>
 print("fake_num >>>",type(fake_num))  # fake_num >>> <class 'str'>
 print("str >>>",type(str))  # str >>> <class 'str'>
-print("ok >>>",type(ok))  # ok >>> <class 'bool'>
+print("ok >>>",type(ok))    # ok >>> <class 'bool'>
+
+# ===================
+
+print("=== 자료형마다 동작 다른 것 확인 ===")
+print(3 + 5)        # 8 int형
+print("3" + "5")    # 35 str형 이어붙이기
+print("안녕하"+"세요") # 안녕하세요 str형 이어붙이기
+
+# ===================
+
+print("=== 자주 하는 실수 ===")
+print(0.1 + 0.8)    # 0.9 float형 (단, 내부 연산 과정에서 작은 오차 발생 가능)
+print(round(0.11 + 0.12, 2))  # 0.23에서 작은 오차가 나올 수 있음. (round로 해결)
+
+# str과 int/float 간 덧셈 불가
+# print('123' + 456)# TypeError 발생
+print(10 / 2)       # 5.0 (나눗셈은 무조건 float 실수형)
+print(type(10 / 2)) # <class 'float'>
