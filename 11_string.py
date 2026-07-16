@@ -60,3 +60,31 @@ print(word[:6:2])               #PTO    0~5번 인덱스를 2자리씩 스킵
 print(word[::2])                #PTO    0번자리에서 2자리씩 스킵
 print(word[1::2])               #YHN    1번자리에서 2자리씩 스킵
 print(word[::-1])               #NOHTYP 
+
+#========================
+#여러 변수 문자열 연결
+#구분자 \ - len() 활용
+
+print(len("Hello, World!"))     #13
+print(len(""))                  #0
+
+var = "여러분~ 한 시간만 힘내보죠."
+print(len(var))                 #16
+print(len("술래잡기")+len("고무줄놀이"))    #9 int반환이라 가능
+
+#in, not in 등 포함 여부 
+print("고장" in "설비 고장")       #True
+print("정상" in "설비 고장")       #False
+print(" " in "설비 고장")         #True
+
+#count 개수 세기    
+fruit = "apple"
+print(fruit.count('a'))         #1 
+print("banana".count('a'))      #3  
+
+#find() 위치 찾기 특정 글자 첫 위치(번호)
+print("진태진".find("진"))        #0 (인덱스 기준이니 첫번째 0자리)
+email = "hong@gamil.com"
+at = email.find("@")            #@위치의 인덱스를 추출
+user_id = email[:at]            #email 할당값의 @위치 인덱스까지
+print(user_id)                  #hong

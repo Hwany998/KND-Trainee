@@ -64,3 +64,11 @@ print(e[::-1])      # 0~끝 역 인덱스
 #실습7 날짜,번호,코드 구간 추출
 real_date = input("입소날짜를 8자리로 입력해주세요. ")
 print("귀하의 포스코인재육성원 입소날짜는 "+real_date[:4]+"년 "+real_date[4:6]+"월 "+real_date[6:8]+"일입니다.")
+
+#실습8 len()활용
+num = "01023456778"
+print(len(num))     #11
+
+#실습9 count()활용
+alp = "a,b,c,d"
+print(alp.count(","))   #3
