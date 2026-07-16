@@ -31,3 +31,12 @@ math = int(input("수학점수: "))
 eng = int(input("영어점수: "))
 science = int(input("과학점수: "))
 print("평균 60점을 넘었는가? "+ str(((math+eng+science)/3) >= 60))
+
+#문자열 이후 실습
+#실습1
+code = "PUMP_A"
+state = "정상"
+run_time = 1200
+check_date = "2026-07-16"
+card = "설비: " + code + "\n상태: " + state + "\n가동: " + str(run_time) + "\n점검: " + check_date # ,쉼표 말고 +로 해라
+print(card)
