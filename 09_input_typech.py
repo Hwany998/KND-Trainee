@@ -20,4 +20,15 @@ input("입력한 정보가 맞다면 네, 틀리면 다시 입력하세요. (ex.
 print(name_age)
 print(type(name_age))       #input()은 무조건 할당받는 값은 str으로 귀결된다. 숫자만 써도 str임.
 
-#
+#형변환 int, str등 type에 ()괄호로 묶어 사용 
+age = int(input("나이(int형_변환ver): "))          #age에 input한 str값을 int로 변환한걸 할당
+print("내년에", str(age + 1)+ "세가 될 예정입니다.")    #str, int를 함께 print할 수 없지만, 형변환을 통해 가능하도록함.
+
+#===========================
+height = float(input("신장: "))   
+print(type(height))     #float
+print(float(12.5))      #실수값을 매개변수로 넣어도 문제 없다.
+print(float(12))        #12.0으로 출력 -> 정수를 실수형으로 변환하기 때문에 .0이 필수
+
+#===========================
+
