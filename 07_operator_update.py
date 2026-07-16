@@ -46,3 +46,24 @@ print(7 < 16)       # True
 
 #비교연산자는 문자열도 가능
 print("Hello" == "hello")   #False (공백 및 대소문자로 결과가 바뀜)
+
+#=========================
+#변수로 문자열 비교
+hello = "hi"
+print(hello == "hi")    #True
+num1, num2 = 123, 456
+print(num1 >= "num2")   #TypeError발생, int와 str 간의 비교 불가
+
+#=========================
+#논리연산자 and / or / not
+print ( 5 == 5 and 7 == 7)
+print ( 5 == 7 and 7 == 7)
+print ( 5 == 5 and 7 != 7)
+
+print ( 5 == 5 or 7 == 7)
+print ( 5 == 7 or 7 == 7)   #False (처음이 False면 다음 조건을 실행하지않음.)
+print ( 5 == 5 or 7 != 7)
+
+#not문은 bool 결과값을 뒤집어 출력
+print(not True)         #False
+print(not 5 == 5)       #False
