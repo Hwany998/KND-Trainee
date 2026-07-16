@@ -1,36 +1,36 @@
-#실습1
-hello = input("이름을 알려주세요. ")
-print("안녕하세요", hello+"님")
+# #실습1
+# hello = input("이름을 알려주세요. ")
+# print("안녕하세요", hello+"님")
 
-#실습2
-age = int(input("태어난 해 (ex: 2000): "))
-print("귀하의 나이는 만 "+str(2026-age))
+# #실습2
+# age = int(input("태어난 해 (ex: 2000): "))
+# print("귀하의 나이는 만 "+str(2026-age))
 
-#실습3
-nation, city = input("국적: "), input("거주도시: ")
-print("당신은 "+nation+" 국적을 가지고 현재 "+city+"에 거주하고 계시군요.")
+# #실습3
+# nation, city = input("국적: "), input("거주도시: ")
+# print("당신은 "+nation+" 국적을 가지고 현재 "+city+"에 거주하고 계시군요.")
 
-#실습4
-a = int(input("1번값: "))
-b = int(input("2번값: "))
-print("더하기: "+str(a + b))
-print("빼기: "+str(a - b))
-print("곱하기: "+str(a * b))
-print("나눗셈: "+str(round(a / b, 2)))
-print("값: "+str(a // b))
-print("나머지: "+str(a % b))
-print("거듭제곱: "+str(a ** b))
+# #실습4
+# a = int(input("1번값: "))
+# b = int(input("2번값: "))
+# print("더하기: "+str(a + b))
+# print("빼기: "+str(a - b))
+# print("곱하기: "+str(a * b))
+# print("나눗셈: "+str(round(a / b, 2)))
+# print("값: "+str(a // b))
+# print("나머지: "+str(a % b))
+# print("거듭제곱: "+str(a ** b))
 
-#실습5
-temp = int(input("현재 온도: "))
-print("출력 결과 1: "+ str(temp > 80))
-print("출력 결과 2: "+ str(temp >= 0))
+# #실습5
+# temp = int(input("현재 온도: "))
+# print("출력 결과 1: "+ str(temp > 80))
+# print("출력 결과 2: "+ str(temp >= 0))
 
-#실습6
-math = int(input("수학점수: "))
-eng = int(input("영어점수: "))
-science = int(input("과학점수: "))
-print("평균 60점을 넘었는가? "+ str(((math+eng+science)/3) >= 60))
+# #실습6
+# math = int(input("수학점수: "))
+# eng = int(input("영어점수: "))
+# science = int(input("과학점수: "))
+# print("평균 60점을 넘었는가? "+ str(((math+eng+science)/3) >= 60))
 
 #문자열 이후 실습
 #실습1
@@ -40,3 +40,27 @@ run_time = 1200
 check_date = "2026-07-16"
 card = "설비: " + code + "\n상태: " + state + "\n가동: " + str(run_time) + "\n점검: " + check_date # ,쉼표 말고 +로 해라
 print(card)
+
+#실습2
+b = "temp_sensor"
+print(b[:4])        # 0~3 인덱스
+
+#실습3
+c = "temp_sensor"
+print(c[5:])        # 5~끝 인덱스
+
+#실습4
+d = "sensor_01"
+print(d[-2:])       # -2~끝 인덱스
+
+#실습5
+e = "PYTHON"
+print(e[::2])       # 0~끝 인덱스 2씩 스킵
+
+#실습6
+e = "PYTHON"
+print(e[::-1])      # 0~끝 역 인덱스
+
+#실습7 날짜,번호,코드 구간 추출
+real_date = input("입소날짜를 8자리로 입력해주세요. ")
+print("귀하의 포스코인재육성원 입소날짜는 "+real_date[:4]+"년 "+real_date[4:6]+"월 "+real_date[6:8]+"일입니다.")

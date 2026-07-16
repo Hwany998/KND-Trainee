@@ -40,3 +40,23 @@ print(quotes)           #It's me
 #" "따옴표 안에 공백(띄어쓰기)있으면 "공백 문자열" 1자 이상
 print("" == " ")        #False
 
+#==================================
+#인덱스 개념 - 문자열 위치에 따른 숫자 지정 (리스트 개념의 시작)
+
+word = "PYTHON"
+print(word[1],word[2],word[0])  #Y T P
+abc = "난뒤로안돌아가돌아버려미쳤어뒤죽박죽피카소곰이된돈시간벌어빚갚어"
+print(abc[10], abc[8], abc[3])  #려 아 안
+korean = "김아무개제한토환경이갖춰진곳"
+print(korean[0]+korean[4]+korean[7])    #김제환
+#print(korean[100])             #korean 100번 인덱스 없어서 IndexError오류
+
+#슬라이싱 문법 [start:end]
+print(word[0:2])                #PY     0~1번 인덱스
+print(word[1:5])                #YTHO   1~4번 인덱스
+print(word[:])                  #PYTHON 시작번~끝번 인덱스 [0:6]기능
+#슬라이싱 문법 중 스킵
+print(word[:6:2])               #PTO    0~5번 인덱스를 2자리씩 스킵
+print(word[::2])                #PTO    0번자리에서 2자리씩 스킵
+print(word[1::2])               #YHN    1번자리에서 2자리씩 스킵
+print(word[::-1])               #NOHTYP 
