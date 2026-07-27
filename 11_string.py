@@ -88,3 +88,37 @@ email = "hong@gamil.com"
 at = email.find("@")            #@위치의 인덱스를 추출
 user_id = email[:at]            #email 할당값의 @위치 인덱스까지
 print(user_id)                  #hong
+
+sqe = "SQE-00Q8"
+print(sqe[:sqe.find("-")])
+
+#index() 위치(인덱스번호) 찾기 (find와 짝, 없으면 오류) 상황따라 사용
+print("===index() ===")
+email = "wpghks1998@naver.com"
+at = email.index("@")         # 5
+print(email[:at])             # wpghks1998
+
+print(sqe[:sqe.index("-")])
+
+#==========================
+print("===count()===")
+str = "a, b, c, d, e,a, a"
+print(str.count("a"))       #3
+print(str.count(","))       #6
+print(str.count(", "))      #5  (정확한 문자열을 가져오기 때문에 5가 반환)
+
+#startswith() - 특정 단어로 !시작!하는 참과 거짓
+print("===startswith()===")         #bool타입
+print("APD-002".startswith("APD"))  #True (APD를 변수로 만들어서 출력시켜도 됨)
+
+#endswith() - 끝 확인, 특정 단어로 !끝!나는 참과 거짓
+print("===endswith()===")         #bool타입
+str2 = "월요일이야! 우리 모두 파이팅!"
+print("APD-002".endswith("!"))      #True
+print("APD-002".endswith("야!"))     #True
+print("APD-002".endswith("엄"))     #False
+print("APD-002".endswith("월요일이야! 우리 모두 파이팅!"))      #True
+print("APD-002".endswith("월요일이야!     우리 모두 파이팅!"))  #False
+print("APD-002".endswith("월요일이야! 우리 모두 파이팅!   "))   #False
+
+#in은 어디든 !포함!

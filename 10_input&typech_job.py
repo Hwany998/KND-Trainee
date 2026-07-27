@@ -72,3 +72,8 @@ print(len(num))     #11
 #실습9 count()활용
 alp = "a,b,c,d"
 print(alp.count(","))   #3
+
+#실습10
+sensor = 'sensor_log.csv'
+print(sensor.startswith("sensor"))  #True
+print(sensor.endswith(".csv"))      #True
