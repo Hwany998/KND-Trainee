@@ -174,3 +174,24 @@ print(str5.strip('abcd'))   #" 이렇게? "
 print(str5.strip('abcd '))  #"이렇게?"
 print(str5.strip('bc'))     #"aaab 이렇게? cd"
 print(str5.strip('ab'))     #" 이렇게? cd"
+
+#=====================
+phone = "010-1234-1234".replace("-", " ")   #010 1234 1234
+print(phone)
+print("정 상 작 동".replace(" ", ""))       #정상작동
+print("정     상 가 동".replace(" ", ""))   #정상가동
+print("정     상 가  동".replace("  ", ""))   #정 상 가동 (2칸 띄우기만 삭제)
+#print("고장". replace)("고장", "fault")  #fault    type오류
+#print("고장". replace("고", "fault"))   #fault장   type오류
+str6 = "설비 정상 가동"
+print(str6.replace("정상", "점검"))     #설비 점검 가동
+print(str6.split())                  #['설비', '정상', '가동']  #띄어쓰기 기준으로 나눠서 리스트로 반환
+
+fruits_list = "사과, 배, 바나나, 딸기"
+print(fruits_list[1])   #배
+print(fruits_list[3])   #딸기
+print(fruits_list[-1])  #딸기
+
+# split 횟수 제한
+num = "010-2283-1234"
+print(num.split("-", 1))   #['010', '2283-1234']  #첫번째 - 기준 횟수로 나눔
