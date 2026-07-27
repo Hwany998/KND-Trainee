@@ -122,3 +122,55 @@ print("APD-002".endswith("월요일이야!     우리 모두 파이팅!"))  #Fal
 print("APD-002".endswith("월요일이야! 우리 모두 파이팅!   "))   #False
 
 #in은 어디든 !포함!
+
+print("===값은 객체다===")
+print(type("잊어먹으면 안돼!"))      #<class 'str'>
+#endswith()과 len의 차이는? endswith()은 .으로 연결 
+#. 연결은 "매서드" / 문자열이나 int, float처럼 특정 자료형(객체) 내부에 포함된 기능
+#startswith(), endswith()은 int 자료형에선 사용 불가
+#print(len(123))       #len 내장함수 또한 'int' 사용 불가
+#len은 . 사용 안함
+#() 는 함수
+#len과 같이 기본 제공 함수 "내장함수"
+
+str3 = "abcdefg"
+
+str3.upper
+print(str3)         #abcdefg str.upper를 재할당하지 않아서 abcdefg가 출력
+
+#lower() - 소문자 변환
+print("===lower()===") #이하 동일
+
+#capitalize() - 첫 글자만 대문자 변환, title() - 각 단어 첫 글자만 대문자 변환 (띄어쓰기, ' 기준)
+user_name = "shinosuke jjangu"
+print(user_name.capitalize())   #Shinosuke jjangu
+print(user_name.title())        #Shinosuke Jjangu
+print("i'm full".title())       #I'M Full
+print("i\'m full".title())       #I'M Full
+
+#strip() - 문자열 양쪽 공백 제거, lstrip() - 왼쪽 공백 제거, rstrip() - 오른쪽 공백 제거
+text = ' 정   상 '
+text = text.strip()
+text1 = text.rstrip()
+text2 = text.lstrip()
+print(text)             # 정   상
+print(text1)            # 정   상
+print(text2)            #정   상
+
+#strip("") - 문자열 양쪽 문자 제거, lstrip("") - 왼쪽 글자 제거, rstrip("") - 오른쪽 글자 제거
+str4 = "===정===상==="
+print(str4.strip("="))    #정===상
+
+#=========체이닝========
+raw = "     NORMAL     "
+step1 = raw.strip()             #NORMAL 
+step2 = step1.lower()           #normal
+chain = raw.strip().lower()     #normal 체이닝
+raw = raw.strip().lower()       #raw 재할당
+
+#=====================
+str5 = "aaab 이렇게? cd"
+print(str5.strip('abcd'))   #" 이렇게? "
+print(str5.strip('abcd '))  #"이렇게?"
+print(str5.strip('bc'))     #"aaab 이렇게? cd"
+print(str5.strip('ab'))     #" 이렇게? cd"
