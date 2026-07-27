@@ -38,6 +38,33 @@ step2 = step1.lower()
 print("["+step1+"]")
 print("["+step2+"]")
 
+#실습2
+font5 = "a,b,c,d"
+print(font5.split(","))
+
 #재밌는? 실습퀴즈
 quiz = 'python'
+#방법1
 print(quiz[:2]+quiz[2].upper()+quiz[3:])
+#방법2
+print(quiz[:2]+quiz.strip("py").title())
+#방법3
+print(quiz.split("t"))
+print("T".join(quiz.split("t")))
+print(quiz[2].upper().join(quiz.split("t")))
+
+#실습3
+date = ['2025', '01', '15']
+print("-".join(date))
+
+#실습4
+date2 = "2026/07/27"
+date2 = date2.split("/")
+date3 = "-".join(date2)
+print(date3)
+
+#실습5
+s = '1, NORMAL, 25.3'
+s = s.split(",")
+s1 = s[1].strip().lower()
+print(s1)
