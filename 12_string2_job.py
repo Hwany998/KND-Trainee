@@ -68,3 +68,8 @@ s = '1, NORMAL, 25.3'
 s = s.split(",")
 s1 = s[1].strip().lower()
 print(s1)
+
+#실습6
+machine = "톱날"
+temp = 65
+print(f'{machine}', 온도 {temp}도)
