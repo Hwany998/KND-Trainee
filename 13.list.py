@@ -22,4 +22,30 @@ print(temp[100:999])  # [] 범위 초과 시 빈 리스트 출력
 print("펌프" in str_temps)      #True
 print("펌프" not in str_temps)  #Fals  
 
-#append()로 리스트 끝에 값 추가
+#append(추가할값)로 리스트 끝에 값 추가
+
+#insert(위치, 값)으로 지정 위치에 끼워 넣고 뒤 값 밀림
+temps3 = [23, 26, 27, 25]
+temps3.insert(2, 38)
+print(temps3)   #[23, 26, 38, 27, 25] 2번 인덱스에 38 삽입
+
+#append 겸 얉은 복사 개념
+nums = [1,2,3,4,5]
+nums.append(222)
+new_num = nums  #얉은 복사 - nums와 공유하는 것으로 C언어의 포인터와 비슷함
+new_num.append(111)
+print(nums)     #[1, 2, 3, 4, 5, 222, 111]  #nums와 new_num은 같은 리스트를 참조
+print(new_num)  #[1, 2, 3, 4, 5, 222, 111]  #new_num에 append하면 nums도 같이 변경
+
+#깊은 복사 - copy() 사용
+new_num2 = nums.copy()  #깊은 복사 - nums와 주소 공유하지 않음
+new_num2.append(333)
+print(nums)     #[1, 2, 3, 4, 5, 222, 111]  #nums와 new_num은 같은 리스트를 참조
+print(new_num2)  #[1, 2, 3, 4, 5, 222, 111, 333]  #new_num에 append하면 nums도 같이 변경
+
+#extend(리스트) 리스트 연결
+data = [1,2,3]
+data2 = [4,5,6]
+print(data.extend(data2))   #None 반환값이 없어서 일단 변수에 할당하는게 첫번째
+data.extend(data2)
+print(data)
