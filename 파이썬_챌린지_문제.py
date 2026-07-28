@@ -87,7 +87,13 @@ print("상승:", 90 - 68, "| 절반:", (90 - 68) / 2)
 #   상승량: 17
 #   평균: 76.5
 # ── 여기에 코드를 작성하세요 ──
-
+print("===== 1호기 점검 =====")
+stand_temp = 68
+print("기준(C):", stand_temp)
+now_temp = 85
+print("현재(C):", now_temp)
+print("상승량:", stand_temp-now_temp)
+print("평균:", (stand_temp+now_temp)/2)
 
 # ─────────────────────────────
 
