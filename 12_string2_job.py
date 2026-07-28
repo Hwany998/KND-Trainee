@@ -72,4 +72,10 @@ print(s1)
 #실습6
 machine = "톱날"
 temp = 65
-print(f'{machine}', 온도 {temp}도)
+print(f'{machine} 온도 {temp}도')
+
+#실습7
+math = 90
+science = 84
+eng = 87
+print(f'시험 평균 점수: {(math+science+eng)/3}')

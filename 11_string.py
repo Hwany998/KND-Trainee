@@ -209,9 +209,15 @@ print("안녕", "하세", end = "요")            #안녕 하세요
 #print("안녕", "하세", end = "요", "ㅎㅎ")    #end, sep 이후 추가 인자 불가
 print("이런식으로 쓰죠?", "근데 안보이는 기본값이 있어요", sep="", end="\n")
 
-#f-string 기본 문법 예시
+#f-string 기본 문법 예시 f'{변수}'
 name = "홍길동"
 age = 25
+#print(str(age))
+#print(name + "님은" + str(age) + "세 입니다.")
 print(f'{name}님은 {age}세 입니다.')
 code = "APD-002"
 print(f'{code} 점검 완료')
+
+#f-string 연산
+hour = 8
+print(f'우리는 하루에 {hour}시간 수업을 듣고, 이는 {hour*60}분에 해당합니다.')
