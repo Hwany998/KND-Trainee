@@ -53,3 +53,12 @@ print(temps3)
 print(temps3.pop(2))
 del temps3[0]
 print(temps3)
+
+#실습9
+temps4 = [22, 24, 25, 24, 29, 30]
+temps4.sort()
+print(temps4)
+temps4.reverse()
+print(temps4)
+print(temps4.count(24))
+print(temps4.index(25))
