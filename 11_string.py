@@ -192,6 +192,8 @@ print(fruits_list[1])   #배
 print(fruits_list[3])   #딸기
 print(fruits_list[-1])  #딸기
 
+print("-".join(fruits_list.split(", ")))
+
 # split 횟수 제한
 num = "010-2283-1234"
 print(num.split("-", 1))   #['010', '2283-1234']  #첫번째 - 기준 횟수로 나눔
@@ -221,3 +223,7 @@ print(f'{code} 점검 완료')
 #f-string 연산
 hour = 8
 print(f'우리는 하루에 {hour}시간 수업을 듣고, 이는 {hour*60}분에 해당합니다.')
+
+#f-string 통한 소수점 자리 표기법
+value = 25.7162712
+print(f'{value:.2f}')    #25.72

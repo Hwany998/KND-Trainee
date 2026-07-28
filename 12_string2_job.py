@@ -79,3 +79,15 @@ math = 90
 science = 84
 eng = 87
 print(f'시험 평균 점수: {(math+science+eng)/3}')
+
+#실습8
+value = 87.456
+print(f'소수점 첫째자리 기준 {value:.1f}, 소수점 둘째자리 기준 {value:.2f}')
+
+#실습9
+item = ' 5, sensor_2, WARNING, 0.78912 '
+item2 = item.strip().split(",")
+real_sensor = item2[1].lstrip()
+status = item2[2].lstrip().lower()
+score = round(float(item2[3].lstrip()),2)
+print(f"[센서 {real_sensor}] 상태 {status}, 측정값 {score}")
