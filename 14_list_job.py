@@ -35,3 +35,21 @@ print(240 in temps2)
 temps2[-1] = 24
 print(temps2)
 print(240 in temps2)
+
+#실습7
+empty_list = []
+ready_list = [31, 32]
+empty_list.append(30)
+print(empty_list)
+empty_list.insert(0, 28)
+print(empty_list)
+empty_list.extend(ready_list)
+print(empty_list)
+
+#실습8
+temps3 = [22, 25, 26, 999, 29, 36]
+temps3.remove(999)
+print(temps3)
+print(temps3.pop(2))
+del temps3[0]
+print(temps3)

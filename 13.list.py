@@ -26,7 +26,7 @@ print("펌프" not in str_temps)  #Fals
 
 #insert(위치, 값)으로 지정 위치에 끼워 넣고 뒤 값 밀림
 temps3 = [23, 26, 27, 25]
-print(temp3.insert(0, 222))   #None 반환값이 없어서 일단 변수에 할당하는게 첫번째
+print(temps3.insert(0, 222))   #None 반환값이 없어서 일단 변수에 할당하는게 첫번째
 temps3.insert(2, 38)
 print(temps3)   #[23, 26, 38, 27, 25] 2번 인덱스에 38 삽입
 
@@ -51,3 +51,21 @@ data2 = [4,5,6]
 print(data.extend(data2))   #None 반환값이 없어서 일단 변수에 할당하는게 첫번째
 data.extend(data2)
 print(data)
+
+#remove() - 제거 / 위치모르고 값만 알 때 사용하는 요소 삭제 / 값 없으면 오류
+list1 = [1,2,3,4,5,6]
+list1.remove(5)   #값으로 제거
+print(list1)    #[1, 2, 3, 4, 6]  #5 제거
+
+#pop - 위치로 꺼내며 제거 / 인덱스 넘기면 오류
+print(list1.pop(2)) #3 출력 -> 제거한 3번 인덱스의 값을 출력
+print(list1)     #[1, 2, 4, 6]  #2번 인덱스 제거
+
+#del - 인덱스로 삭제, 값을 돌려주지 않음 / 인덱스 넘기면 오류
+del list1[:]
+print(list1)    #[] #[:]로 전체 삭제
+
+#del - 건너뛰기 / 인덱스 넘기면 오류
+list2 = ["빨강", "노랑", "초록", "파랑", "남색", "보랑"]
+del list2[::2]
+print(list2)    #['노랑', '파랑', '보람']  #0,2,4번 인덱스 제거
