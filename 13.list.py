@@ -26,11 +26,13 @@ print("펌프" not in str_temps)  #Fals
 
 #insert(위치, 값)으로 지정 위치에 끼워 넣고 뒤 값 밀림
 temps3 = [23, 26, 27, 25]
+print(temp3.insert(0, 222))   #None 반환값이 없어서 일단 변수에 할당하는게 첫번째
 temps3.insert(2, 38)
 print(temps3)   #[23, 26, 38, 27, 25] 2번 인덱스에 38 삽입
 
 #append 겸 얉은 복사 개념
 nums = [1,2,3,4,5]
+print(nums.append(222))   #None 반환값이 없어서 일단 변수에 할당하는게 첫번째
 nums.append(222)
 new_num = nums  #얉은 복사 - nums와 공유하는 것으로 C언어의 포인터와 비슷함
 new_num.append(111)
