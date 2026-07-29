@@ -83,5 +83,4 @@ print(f.count("일회용컵"))
 print(f)
 
 #특정 값의 위치 찾기 .index(위치를찾을값)
-
 print(f.index("일회용컵"))
