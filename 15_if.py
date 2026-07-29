@@ -68,4 +68,39 @@ else:
     print("정상 체온입니다.")
 print("체온 확인 완료.")
 
-# elif 탄생
+# elif 탄생 (if다중첩)
+score = 82
+if score >= 90: print("우수")
+elif score >= 70: print("보통")
+elif score >= 50: print("미흡")
+else: print("과락")
+
+#not 연산자
+if not (3 == 5): print("출력됩니다.")
+
+#실습2
+prac_temp = int(input("측정 온도를 입력하세요: "))
+if prac_temp > 80:
+ print("위험")
+elif prac_temp > 60:
+ print("주의")
+else:
+ print("정상")
+
+#실습3
+id = str("ID를 입력해주세요. (8자까지): ")
+pw = str("PW를 입력해주세요. (8자까지): ")
+if(id == "wpghks" & pw == "1998"):
+    print("회원 정보 확인.")
+else:
+    print("다시 확인하세요.")
+
+#실습4 (자료상 실습5)
+prac_temp2 = int(input("현재 온도: "))
+prac_vibe2 = float(input("현재 진동: "))
+prac_elec2 = int(input("현재 전류: "))
+if(prac_temp2 > 80 and prac_vibe2 > 4.0): print("위험: 즉시 정지")
+else:
+    if(prac_elec2 > 60 and prac_temp2 > 70): print("주의: 부하 점검")
+    elif(prac_vibe2 > 2.5): print("주의: 진동 관찰")
+    else: print("정상")
