@@ -22,7 +22,7 @@ low.sort()
 print(low)
 
 #실습 조건 맞는 새 리스트 
-prac_temps = [20, 29, 24, 30, 31, 33, 35]
+prac_temps = [20, 29, 24, 32, 31, 33, 35]
 high_temps = []
 for t in prac_temps :
     if(t > 30):
