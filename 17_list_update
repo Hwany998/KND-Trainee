@@ -1,0 +1,8 @@
+temps = [1,5,2,7,8,2,9,10]
+doubled = []
+
+for t in temps:
+    doubled.append(t*3)
+
+print(doubled)
+#조건에 맞는 값으로 새 리스트 만들기
