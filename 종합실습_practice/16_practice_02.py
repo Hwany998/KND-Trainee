@@ -16,7 +16,9 @@ cover_temps = 0
 while True:
     x = input("측정값을 입력하세요. 종료하려면 q. ")
     if x == 'q':
-        break
+        if len(temps) == 1:
+            print("입력된 측정값이 없습니다.")
+            break
     temps.append(int(x))
     cover_temps = 0
     if int(x) >= LIMIT:
