@@ -29,3 +29,16 @@ for t in prac_temps :
         high_temps.append(t)
 print(prac_temps, high_temps)
 print(f"개수 {len(high_temps)}")
+
+#실습 센서 데이터
+temps1 = [30, 29, 25, 31, 32, 26]
+temps_sum = 0
+temps_empty = []
+for i in temps1:
+    i = temps1
+print("전체 평균:",sum(temps)/6)
+for i in temps1:
+    if(i > 30):
+        temps_empty.append(i)
+        sum(temps_empty)
+print(f"고온 개수: {len(temps_empty)} / 고온 평균: {sum(temps_empty)/len(temps_empty)}")
