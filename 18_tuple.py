@@ -86,3 +86,8 @@ for c, d, e in sensors2:
     x, y = e
     if x <= 5:
         print(c, "1구역")
+
+# 리스트를 set으로 감싸면 중복 제거, 순서 없음(인덱스 못씀)
+# 빈 셋은 함수를 생성한다. set()
+list_ = []  #빈 리스트
+tuple_ = ()    #빈 튜플
