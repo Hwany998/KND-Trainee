@@ -17,8 +17,9 @@ max_value = 0
 min_value = 0
 avg_list = 0
 big_num = 0
+plag = True
 
-while True:
+while plag:
     x = input("측정값을 입력하세요. 종료하려면 q. ")
     if x != 'q' and x != "":
         temps.append(float(x))
@@ -34,7 +35,6 @@ while True:
             print("입력된 측정값이 없습니다.")
             break
         else:
-            print("q")
             print("-" * 40)
             print(f'총 입력 개수: {len(temps)}개')
             max_value = temps[0]
@@ -54,6 +54,7 @@ while True:
             print(f"평균 초과 개수: {big_num}개")
             temps.sort(reverse=True)
             print(f"상위 3개 값: {temps[:3]}")
+            plag = False
 
 
 # TODO 2. 입력값이 LIMIT 초과하면 즉시 경고 + 지금까지 초과 횟수 출력
