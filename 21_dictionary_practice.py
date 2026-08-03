@@ -41,9 +41,20 @@ print(f'센서 수: {len(sensors)}')        #센서 수: 3
 #실습3. 딕셔너리로 통계
 #1) 센서명, 측정값 딕셔너리 저장
 sensors2 = {
-    "모터",
-    "압력기"
+    "모터온도": 80,
+    "진동": 0.3,
+    "습도": 30
 }
+#2) values의 합을 개수로 나눠 평균 구하기
+print(f'평균: {round(sum(sensors2.values()) / len(sensors2),1)}')
+
+#3) items로 순회하며 가장 큰 값과 그 센서명을 찾아 출력
+max_value = 0
+for name, value in sensors2.items():
+    if max_value < value:
+        max_value = value
+        max_name = name
+print(f'최댓값 센서: {max_name} {max_value}')
 
 #실습4. zip으로 센서명-값 매핑
 #1) 센서명 리스트와 측정값 리스트 저장
@@ -57,6 +68,27 @@ print(sensors3)
 #3) items로 순회하며 이름-값 쌍 출력
 for name, value in sensors3.items():
     print(f"이름: {name} - 값: {value}")
+
+#실습5. 임계값으로 경고 센서 분류하기
+#1) 측정값 딕셔너리와 임계값 딕셔너리를 각각 저장
+sensors5 = {
+    "1번펌프": 32,
+    "2번펌프": 40,
+    "3번펌프": 36
+}
+sensor_limits = {
+    "1번펌프": 34,
+    "2번펌프": 44,
+    "3번펌프": 33
+}
+
+#2 items로 순회하며 각 센서값 같은 이름의 임계값을 넘는지 비교
+over_list = []
+for name, value in sensors5.items():
+    if value > sensor_limits.get(name,0):
+        over_list.append(name)
+#3 넘는 센서 이름을 빈 리스트에 모아 출력
+print(over_list)
 
 #실습6: 중첩 딕셔너리로 설비 관리
 #1) 설비명을 키로, 각 설비 정보(딕셔너리)를 값으로하는 중첩 딕셔너리 저장
@@ -78,3 +110,5 @@ print(sensors4["2번펌프"]["온도"])   #95
 for name, value in sensors4.items():
     if value["상태"] == "경고":
         print(f'{name} 점검 필요')
+
+#실습7. 표 데이터를 딕셔너리로 변환하기

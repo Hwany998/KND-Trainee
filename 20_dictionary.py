@@ -52,7 +52,7 @@ print(sensors.keys())   #dict_keys(['센서이름', '모터온도', '진동'])
 print(sensors.values()) #dict_values([펌프, 78, 0.5])
 print(len(sensors))     #3 키 길이
 #items는 키,값 짝으로 함께 꺼내 반복문에서 가장 많이 사용
-for key, value in sensors.items():  #sensors마 하면 error뜸
+for key, value in sensors.items():  #sensors 하면 error뜸
     print(key, value)
 
 #사례로 배우는 실습
