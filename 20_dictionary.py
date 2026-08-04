@@ -151,11 +151,11 @@ values = {"모터온도": 95, "압력": 88} # "진동": 0.5}
 #임계치
 limits = {"모터온도": 90, "압력": 90}   #여긴 진동값이 없어서 오류가 발생함
 
-# for name, value in values.items():
-#     print(f"{name} 값: {value}")
+for name, value in values.items():
+     print(f"{name} 값: {value}")
     
-#     if values > limits:
-#         print(name, "경고")
+     if value > limits[name]:
+         print(name, "경고")
 
 sensors = {"모터온도": 95, "압력": 88, "진동": 0.5}
 new_data = {"모터온도": 90, "압력": 90, "진동": 0.5}
@@ -201,7 +201,7 @@ kbo = {
         "구장": {
             "1구장": "대구라이온스파크",
             "2구장": "포항야구장"
-        },
+        }
     },
     "두산": {
         "마스코트": "베어스",
@@ -213,4 +213,50 @@ kbo = {
 }
 
 #쉽게 배열 안에 딕셔너리 안에 딕셔너리 접근
-print(kbo[0]["구장"]["2구장"])
+print(kbo["삼성"]["구장"]["2구장"])
+
+# 딕셔너리 예제
+location_dict = {
+    "시" : [
+        {
+            "이름":"서울특별시",
+            "기초단체":["종로구", "중구", "마포구"]
+        },
+        {
+            "이름":"대구광역시",
+            "기초단체":["중구", "수성구", "달서구"]
+        }
+    ],
+    "도": [
+        {
+            "이름":"경기도",
+            "기초단체":["안양시", "수원시", "화성시"]
+        },
+        {
+            "이름":"경상북도",
+            "기초단체":["포항시", "경주시", "김천시"]
+        }
+    ]
+}
+#전체 출력
+print(location_dict)
+print("-" * 40)
+
+#시, 도 출력
+print(location_dict["시"])
+print(location_dict.get("도"))
+print("-" * 40)
+
+#각 시 도 마다 세부 딕셔너리들 출력
+for basic_dict in location_dict["시"]:  #리스트를 가져옴
+    print(basic_dict.get("이름"))
+    print(basic_dict.get("기초단체"))
+    print("-" * 40)
+
+for basic_dict in location_dict.get("도"):  #리스트를 가져옴
+    print(basic_dict.get("이름"))
+    print(basic_dict.get("기초단체"))
+    print("-" * 40)
+
+# 위의 코드 중 중복 부분 묶고, 다른 점만 외부에서 시키면 돌아가는
+# 함수(function)를 만들면 효율성 증가
