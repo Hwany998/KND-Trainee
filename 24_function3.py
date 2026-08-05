@@ -86,3 +86,47 @@ print(summing_function)
 # 4) 담은 값을 다음 계산, 출력에 이어 쓰기
 print(summing_function + 5)
 
+print("=" * 40)
+
+# 실습5
+# 1) 센서값 목록을 매개변수로 받은 함수를 정의
+def sensors2(value):
+# 2) min, max 합 + 개수로 최소, 최대, 평균을 계산
+    minimum = min(value)
+    maximum = max(value)
+    avg = sum(value) / len(value)
+# 3) 세 값을 쉼표로 함께 return
+    return minimum, maximum, avg
+# 4) 돌려받은 값을 세 변수로 언패킹해 출력
+target_list = [20, 80, 40, 30, 10]
+maxim, mini, avg_value = sensors2(target_list)
+print(maxim, mini, avg_value)   # (10, 80, 36.0)
+
+# 실습6
+# 1) 값을 받아 계산해 return하는 함수를 정의
+def avg_maker(sensors):
+    avg = round(sum(sensors) / len(sensors),1)
+    return avg
+# 2) 계산결과를 받아 판정해 출력하는 함수 정의
+def deci_result(avg_temp):
+    if avg_temp > 90:
+        state = "고온"
+    elif avg_temp > 60:
+        state = "정상"
+    else:
+        state = "저온"
+    return state
+# 3) 첫 함수 반환값을 변수에 담아 둘째 함수에 전달
+machine_temp1 = [45, 94, 30]
+machine_temp2 = [60, 92, 72]
+# 4) 실행해 입력,처리,출력 흐름이 이어지는지 확인
+print(f"{machine_temp1} 평균 : {avg_maker(machine_temp1)} -> {deci_result(avg_maker(machine_temp1))}")
+print(f"{machine_temp2} 평균 : {avg_maker(machine_temp2)} -> {deci_result(avg_maker(machine_temp2))}")
+# 실습7
+# 1) 센서값 목록을 받아 평균을 return하는 함수 정의
+
+# 2) 평균과 기준값(기본값 존재)을 받아 상태를 판정해 return하는 함수 정의
+
+# 3) 두 함수를 순서대로 연결해 목록에서 상태까지 구하기
+
+# 4) 실행해 흐름과 결과를 확인
