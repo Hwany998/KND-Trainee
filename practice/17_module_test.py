@@ -40,7 +40,7 @@ print("=" * 40)
 import os
 
 #2) path.join으로 폴더와 파일 이름을 이어 경로 만들기
-path = os.path.join("data", "08_press.csv")
+path = os.path.join("lecture", "17_press.csv")
 print(path)  # data\08_press.csv
 
 #3) path.exists로 그 경로가 있는지 참, 거짓 확인
@@ -72,18 +72,40 @@ print(f'점검 시각 {now}, 점검할 파일 수 {file_list_len}')
 print("=" * 40)
 
 # 선택실습1 (실습3)
+#1) os를 import
+import os
+
+#2) getcwd로 현재 작업 폴더 확인
+current_path = os.getcwd()
+print(current_path)
+
+#3) listdir로 폴더 안 목록을 변수에 담기
+file_list = os.listdir(current_path)
+print(file_list)
+
+#4) for로 목록을 하나씩 출력하고 csv만 골라 출력
+for name in file_list:
+    print(name)
+    if name.endswith(".csv"):
+        print(name)
+else:
+    print("경로 내 .csv파일 없음")
+
+print("=" * 40)
+
+# 실습2 (실습6)
 #1) os를 import하고 listdir로 폴더 목록 구하기
 import os
-file_list = os.listdir()
+file_list2 = os.listdir("lecture")
 
 #2) for-if로 .csv로 끝나는 이름만 빈 리스트에 모으기
 csv_list = []
-for name in file_list:
-    if name.endswith(".csv") == True:
-        csv_list.append()
-
+for name in file_list2:
+    if name.endswith(".csv"):
 #3) 모은 csv마다 path.join으로 전체 경로 만들기
-csv_list = os.path.join("08_press.csv")
+        file_path = os.path.join(os.getcwd(), name)
+        csv_list.append(file_path)
 
-#4) 골라낸 csv 목록을 출력
-print(csv_list)
+#4) 골라낸 csv 목록 출력
+for path in csv_list:
+    print(f'[CSV]목록 ({path})')
