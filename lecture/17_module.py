@@ -52,3 +52,4 @@ print(now)
 # dir(math)
 # help(math.sqrt)
 
+# 이후 상담
