@@ -1,0 +1,9 @@
+open() 내장함수 사용 위한 임시 파일
+hello~~
+im your father
+it's me
+i can speak english
+what are you doing now
+you look so tired
+are you okay?
+goodbye~ see you later

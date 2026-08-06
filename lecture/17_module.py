@@ -53,3 +53,7 @@ print(now)
 # help(math.sqrt)
 
 # 이후 상담
+
+# open() 함수 구조
+# open(파일명, 모드, 인코딩) - 내장함수라 import없이 사용 가능
+# open() 이후는 무조건 close() 함수를 꼭!!!!!!!!!! 써야함.
