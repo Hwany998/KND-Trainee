@@ -37,3 +37,6 @@ except ValueError:  # 타입은 맞지만 값이 부적절할 때 발생 (글자
 
 next_temp = temp + 10
 print(f"10도만 더 높으면 {next_temp}")
+
+# FileNotFoundError - 문제는 파일명 오타, 경로 문제, 확장자 숨김 3가지로 귀결됨
+# 예외마다 다른 대처가 필요하면 except 여러 개로 설정 가능
