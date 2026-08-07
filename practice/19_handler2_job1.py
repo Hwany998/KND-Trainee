@@ -3,16 +3,12 @@
 import csv
 
 try:
-    f = open("lecture/19_student_scores.csv", "r", encoding = "utf-8")
-    reader = csv.reader(f)
-    header = next(reader)
-
+    f = open("open_file.txt", "w", encoding = "utf-8")
+    line = f.write()
+    print(line)
 #2) 처리 도중 오류가 날 수 있음 가정
-except ValueError:
-    header.startswith("김")
+except:
     print("잘못된 값 입력되어 0으로 처리")
-else:
-    print(f"{temp}, 알맞은 값")
 
 #3) finally 블록에 close를 넣어 오류 상관없이 닫기
 finally:
