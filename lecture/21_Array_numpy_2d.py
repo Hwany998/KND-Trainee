@@ -31,7 +31,12 @@ print(int_list.astype(float))
 
 #실습6
 int_arange = np.arange(0, 8)
+a = np.array([[70, 2.1], [72, 2.3], [71, 1.9]])
 print(int_arange.reshape(2, 4))
+print(a.shape)  #(3, 2)
+print(a[1])     #[72, 2.3]
+print(a[0, 1])  #2.1
+print(a[:, 0])  #[70. 72. 71.]
 
 #실습7
 a_arange = np.arange(15)
