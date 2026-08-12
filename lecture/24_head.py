@@ -18,3 +18,15 @@ print(df_small.head(3))   # 맨 위 3줄
 print(df_small.tail(5))   # 맨 아래 5줄
 
 #끝나면 실습2의 head, tail 행 개수 조절도 진행
+
+#실습3. shape, columns, dtypes로 데이터 뼈대 읽기
+#12_metro_digital.csv 읽어봐서 DataFrame에 담기
+#.columns 출력 df.columns.tolist()도 출력
+#DF의 .dtypes 출력
+
+#실습4 열 이름, 자료형 점검
+
+#실습5. .info()로 데이터 건강검진
+#.info()를 통해 전체 구조 행수, 열수, 열이름 한 번에 보기 가능
+# 12_metro_digital.csv 파일을 읽어서 DF 생성
+# DF의 info() 호출 출력
