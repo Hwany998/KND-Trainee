@@ -23,18 +23,15 @@ print('-' * 40)
 # 실습 2. dropna 옵션 조절
 # how·thresh·subset로 삭제 기준을 세밀하게 조절
 
-# how로 완전히 빈 행만 삭제하는 기준 적용 -> how = 'all' 조건
+# how로 "빈" 행만 삭제하는 기준 적용 -> how = 'all' 조건
 print(df.dropna(how = 'all').shape) # (250, 22)
 # 250개 row가 다 살아남았다는 의미 (NaN으로 모든 컬럼 내용이 다 채워진 row가 없다는 뜻)
 
-# thresh로 값이 일정(예, 20개) 개수 "이상"인 행만 남기기 -> thresh = 20
+# thresh로 값 개수 20개 "이상"인 행만 남기기 -> thresh = 20
 print(df.dropna(thresh = 20).shape) # (162, 22)
-# 250 - 162 = 88개 row는 NaN이 3개 이상이라는 뜻
+# 250 - 162 = 88개 row는 NaN이 3개 이상
 
 # subset으로 특정 컬럼이 빈 행만 삭제
 # 예, 불량여부 컬럼에 NaN이 있는 row들만 제거 -> subset = ['불량여부']
 print(df.dropna(subset = ['불량여부']).shape) # (250, 22)
 # '불량여부' 컬럼에는 NaN이 하나도 없다고 판단 가능
-
-# 예상 결과
-# 완전 결측 행만 삭제는 거의 유지, 임계값 20은 162행
